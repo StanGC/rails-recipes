@@ -16,5 +16,6 @@ module RailsRecipes
     # -- all .rb files in that directory are automatically loaded.
     config.i18n.default_locale = "zh-TW"
     config.time_zone = "Taipei"
+    Time::DATE_FORMATS.merge!(:default => '%Y/%m/%d %I:%M %p', :ymd => '%Y/%m/%d')
   end
 end
