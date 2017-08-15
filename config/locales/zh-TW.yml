@@ -8,3 +8,8 @@
       event:
         name: "活動名稱"
         description: "描述"
+  event:
+    status:
+      draft: 草稿
+      public: 公開
+      private: 私密
