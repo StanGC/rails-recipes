@@ -3,6 +3,7 @@
   event_list: 活動列表
   admin:
     event_list: 活動列表管理
+    category_list: 活動類別管理
   activerecord:
     attributes:
       event:
