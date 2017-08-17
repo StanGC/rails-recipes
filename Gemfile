@@ -39,6 +39,7 @@ gem "rails-i18n"
 gem "devise-i18n"
 gem "select2-rails"
 gem "nested_form_fields"
+gem 'bootstrap-datepicker-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
