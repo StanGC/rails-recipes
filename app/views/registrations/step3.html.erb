@@ -10,7 +10,7 @@
 
   <div class="form-group <%= (f.object.errors[:bio].any?)? "has-error" : "" %>">
     <%= f.label :bio, "自我介紹", :class => "control-label" %>
-    <%= f.text_area :bio, :class => "form-control" %>
+    <%= f.text_area :bio, :class => "form-control", :required => true %>
 
     <% if f.object.errors[:bio] %>
       <span class="help-block"><%= safe_join(f.object.errors[:bio], "、") %></span>
