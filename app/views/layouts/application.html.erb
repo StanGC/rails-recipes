@@ -49,11 +49,17 @@
         </div><!--/.container-fluid -->
       </nav>
 
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <div class="container">
+        <% if notice %>
+          <p class="notice alert-success" style="padding: 15px;"><%= notice %></p>
+        <% end %>
 
+        <% if alert %>
+          <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
 
-      <%= yield %>
+        <%= yield %>
+      </div>
 
     <%= link_to "FAQ", faq_path %>
 
