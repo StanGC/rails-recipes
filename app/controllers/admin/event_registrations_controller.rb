@@ -4,12 +4,20 @@ class Admin::EventRegistrationsController < ApplicationController
   def index
     @registrations = @event.registrations.includes(:ticket).order("id DESC").page(params[:page]).per(20)
 
-    if params[:status].present? && Registration::STATUS.include?(params[:status])
-      @registrations = @registrations.by_status(params[:status])
+    # if params[:status].present? && Registration::STATUS.include?(params[:status])
+    #   @registrations = @registrations.by_status(params[:status])
+    # end
+
+    # if params[:ticket_id].present?
+    #   @registrations = @registrations.by_ticket(params[:ticket_id])
+    # end
+
+    if Array(params[:statuses]).any?
+      @registrations = @registrations.by_status(params[:statuses])
     end
 
-    if params[:ticket_id].present?
-      @registrations = @registrations.by_ticket(params[:ticket_id])
+    if Array(params[:ticket_ids]).any?
+      @registrations = @registrations.by_ticket(params[:ticket_ids])
     end
   end
 
