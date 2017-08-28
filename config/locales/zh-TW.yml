@@ -24,3 +24,6 @@
     role:
       admin: 超級管理員
       editor: 活動管理員
+  notification:
+    subject:
+      confirmed_registration: "報名成功: %{name}"
