@@ -20,3 +20,7 @@
     status:
       pending: 報名尚未完成
       confirmed: 報名成功
+  user:
+    role:
+      admin: 超級管理員
+      editor: 活動管理員
