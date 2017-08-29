@@ -13,8 +13,8 @@ class Admin::RegistrationImportsController < AdminController
     @import.user = current_user
 
     if @import.save
-      @import.process!
-      flash[:notice] = "匯入完成"
+      ImportWorkerJob.perform_later(@import.id)
+      flash[:notice] = "匯入已在背景執行，請稍候再來查看結果"
     end
 
     redirect_to admin_event_registration_imports_path(@event)
