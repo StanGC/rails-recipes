@@ -57,4 +57,7 @@ Rails.application.configure do
 
   # Letter opener
   config.action_mailer.delivery_method = :letter_opener
+
+  # Sidekiq
+  config.active_job.queue_adapter = :sidekiq
 end
