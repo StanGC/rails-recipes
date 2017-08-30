@@ -20,6 +20,7 @@
     status:
       pending: 報名尚未完成
       confirmed: 報名成功
+      cancalled: 報名已取消
   user:
     role:
       admin: 超級管理員
